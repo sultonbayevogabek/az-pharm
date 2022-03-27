@@ -11,7 +11,7 @@ export default () => {
             perPage: 1,
             perMove: 1,
             gap: '30px',
-            pagination: false
+            pagination: false,
         }).mount()
         new Splide('.feedback-slider', {
             type: 'loop',
@@ -24,7 +24,19 @@ export default () => {
             perPage: 2,
             perMove: 2,
             gap: '20px',
-            pagination: false
+            pagination: false,
+            breakpoints: {
+                '1000': {
+                    perPage: 2,
+                    arrows: false,
+                    gap: '12px'
+                },
+                '700': {
+                    perPage: 1,
+                    arrows: false,
+                    gap: '12px'
+                }
+            }
         }).mount()
     } catch (e) {}
 }
